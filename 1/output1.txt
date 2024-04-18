@@ -1,0 +1,12 @@
+def calculate_circle_area(radius):
+    return math.pi * radius ** 2
+
+def calculate_rectangle_area(length, width):
+    return length * width
+
+def calculate_area(shape, *args):
+    if shape == 'circle':
+        return calculate_circle_area(*args)
+    elif shape == 'rectangle':
+        return calculate_rectangle_area(*args)
+   

@@ -1,0 +1,9 @@
+def calculate_area(shape, *args):
+    if shape=='circle':
+        radius = args[0]
+        area = math.pi*radius**2
+    elif shape == 'rectangle':
+        length = args[0]
+        width = args[1]
+        area = length * width
+    return area

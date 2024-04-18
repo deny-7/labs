@@ -1,0 +1,1 @@
+As a result of refactoring, the calculation of the area was separated into individual functions, and the variable 'area' was replaced with the corresponding area calculation functions for the shape.
