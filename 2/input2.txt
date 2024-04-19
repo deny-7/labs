@@ -1,0 +1,42 @@
+def calculate_score(name, age, gender, height, weight, score1, score2, score3, score4, score5):
+    # Business logic for calculating the overall rating
+    total_score = score1 + score2 + score3 + score4 + score5
+
+    # Check if the user is an adult
+    is_adult = True if age >= 18 else False
+
+    # Виведення результатів
+    print("Name:", name)
+    print("Age:", age)
+    print("Gender:", gender)
+    print("Height:", height)
+    print("Weight:", weight)
+    print("Total Score:", total_score)
+    print("Adult:", is_adult)
+
+# Example function call
+calculate_score("John", 25, "Male", 175, 70, 85, 90, 75, 88, 92)
+
+
+
+class User:
+    type_engineer = 1
+    type_manager = 2    
+
+    def __init__(self, name, age, type, phone, phone_code):
+        self.name = name
+        self.age = age
+        self.type = type
+        self.phone = phone
+        self.phone_code = phone_code
+
+    def print_details(self):
+        # Виведення інформації про користувача
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Type:", self.type)
+        print("Phone:", self.phone_code + self.phone)
+
+# Example of the class
+user = User("John", 25, User.type_engineer, "9379992", “050”)
+user.print_details()
