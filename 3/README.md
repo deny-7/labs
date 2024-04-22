@@ -1,0 +1,3 @@
+1. A basic Shape class was developed, which includes a method for calculating area. This method is used in all subclasses representing different geometric shapes. Each subclass overrides this method to suit the specific rules for calculating the area of each shape.
+
+2. Instead of using a switch statement, we used the getattr method, which allows us to retrieve an object's attribute by its name passed as a string. This allows us to call the area calculation method according to the selected shape by passing its name as a string.
