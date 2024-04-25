@@ -1,0 +1,38 @@
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+    def move(self):
+        print("Animal moves")
+
+class Dog:
+    def __init__(self):
+        self.animal = Animal()
+
+    def speak(self):
+        self.animal.speak()
+
+    def move(self):
+        self.animal.move()
+
+# An example on how to use the class
+dog = Dog()
+dog.speak()
+dog.move()
+
+
+
+class Square:
+    def area(self, side):
+        return side ** 2
+
+class Circle:
+    def area(self, radius):
+        return math.pi * radius ** 2
+
+# An example on how to use the class
+square = Square()
+print("Area of square:", square.area(5))
+
+circle = Circle()
+print("Area of circle:", circle.area(3))
