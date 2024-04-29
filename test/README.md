@@ -1,0 +1,2 @@
+1. The base class Product was created, it contains general properties and methods for managing products. Each other class performs only one specific responsibility.
+2. Instead of direct usage the methods of objects of the Product class, composition is used: an instance of the Product class is passed to the constructors of other classes, allowing these classes to work with the product object without directly depending on its implementation.
