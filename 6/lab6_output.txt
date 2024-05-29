@@ -1,0 +1,46 @@
+class PriceCalculator:
+    def __init__(self):
+        pass
+    
+    def calculate_total_price(self, product_prices, discount=0, tax_rate=0):
+        total_price = sum(product_prices)
+        if discount:
+            total_price *= (1 - discount)  
+        if tax_rate:
+            total_price *= (1 + tax_rate)  
+        return total_price
+
+
+prices = [100, 200, 300]
+discount = 0.1  
+tax_rate = 0.05  
+
+calculator = PriceCalculator()
+total_price = calculator.calculate_total_price(prices, discount, tax_rate)
+print(total_price)
+//////////////////////////////////////////////////////////////////////////////////
+class DataAnalyzer:
+    def __init__(self, data):
+        self.data = data
+
+    def _calculate_total_and_count(self):
+        total = sum(self.data)
+        count = len(self.data)
+        return total, count
+
+    def _calculate_total(self):
+        total, _ = self._calculate_total_and_count()
+        return total
+
+    def calculate_total(self):
+        return self._calculate_total()
+
+    def calculate_average(self):
+        total, count = self._calculate_total_and_count()
+        return total / count if count != 0 else 0
+
+    def calculate_minimum(self):
+        return min(self.data) if self.data else None
+
+    def calculate_maximum(self):
+        return max(self.data) if self.data else None
